@@ -110,7 +110,7 @@ If the user selects "I don't have an account yet," direct them to sign up at [ti
 
 If the user selects "I'm not sure," direct them to check at [tiny.cloud/my-account](https://www.tiny.cloud/my-account/) and ask them to come back with the answer.
 
-Store the plan for use in plugin selection. If the user is on **Essential**, restrict plugin recommendations to Essential-available plugins only (see the Plan Availability Table in Section 2.2). If the user is on **Professional** or **Enterprise**, all plugins are available. If the user is on a **14-day trial** or **free subscription**, all plugins are available during the trial period.
+Store the plan for use in plugin selection. If the user is on **Essential**, restrict plugin recommendations to Essential-available plugins only (see the Plan Availability Table in Section 2.2). If the user is on **Professional** or **Enterprise**, all plugins are available. If the user is on a **14-day trial**, all plugins are available for the duration of the trial. If the user is on a **free subscription**, only the 30 free open-source plugins are available — do not recommend any premium plugins.
 
 #### Step A4: The API Key Gate
 
@@ -337,7 +337,7 @@ When the user is on the **Essential** plan (not a trial), replace unavailable pl
 ### When to Apply Plan Restrictions
 
 - **14-day trial:** All plugins available (trial unlocks everything). Recommend freely.
-- **Free subscription:** All plugins available during trial window. Recommend freely — the user will see which require a paid plan when the trial expires.
+- **Free subscription:** No premium plugins available. Only include the 30 free open-source plugins in the code snippet. Do not recommend or include any premium plugins — the user would see errors or locked features.
 - **Paid — Essential:** Apply the Essential Fallback Mapping above. Only include plugins marked ✅ for Essential.
 - **Paid — Professional / Enterprise:** All plugins available. Recommend freely.
 - **"I'm not sure":** If the user couldn't determine their plan, recommend freely but add a note at the end of the code delivery: "Some premium plugins in this setup require a Professional plan or higher. If any plugin doesn't load, check your plan at [tiny.cloud/my-account](https://www.tiny.cloud/my-account/) — you may need to upgrade or remove that plugin."
